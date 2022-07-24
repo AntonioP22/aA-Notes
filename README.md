@@ -1,5 +1,9 @@
 # aA-Notes
 
+## Using this repository
+
+Use the Template Button above ^
+
 This is my version of the Notes from App Academy that includes the following information:
 
 ## Week 1:
@@ -9,10 +13,6 @@ This is my version of the Notes from App Academy that includes the following inf
 3. For loop statements
 4. While statements
 5. Array Methods
-
-## Using this repository
-
-Use the Template Button above ^
 <!---
 ```
 gh repo clone AntonioP22/aA-Notes
