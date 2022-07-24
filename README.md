@@ -2,7 +2,7 @@
 
 ## Using this repository
 
-1. Use ```https://github.com/AntonioP22/aA-Notes.git``` in your VSCode Terminal. (Don't click on the .github/ISSUE_TEMPLATE)
+1. Fork the Repo in the top right corner. (Don't click on the .github/ISSUE_TEMPLATE)
 
 2. If there's a new update you will need to do ```git pull origin main``` in order to get the latest update.
 
