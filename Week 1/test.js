@@ -73,7 +73,16 @@ console.log(myArray[3][1]); // true
  * IndexOf
  */
 
-console.log(myArray.indexOf(false));
+function myIndexOf(arr, searchElement) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === searchElement) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+// console.log(myArray.indexOf(false));
 
 /**
  *
@@ -258,6 +267,14 @@ function sumArrayWhile(array) {
   return sum;
 }
 
+function sumArray(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum;
+}
+
 console.log(sumArray([5, 6, 4])); // => 15
 console.log(sumArray([7, 3, 9, 11])); // => 30
 
@@ -383,13 +400,12 @@ function myIncludes(arr, searchElement) {
   return false;
 }
 
-function sumArray(arr) {
-  let sum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    sum += arr[i];
-  }
-  return sum;
-}
+/**
+ *
+ * Factors Of
+ * Write a function that takes in a number and returns an array of all the numbers that are factors of the number.
+ *
+ */
 
 function factorsOf(num) {
   let factors = [];
@@ -399,15 +415,6 @@ function factorsOf(num) {
     }
   }
   return factors;
-}
-
-function myIndexOf(arr, searchElement) {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === searchElement) {
-      return i;
-    }
-  }
-  return -1;
 }
 
 function countVowels(str) {
