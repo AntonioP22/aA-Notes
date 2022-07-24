@@ -1,230 +1,320 @@
 /**
+ *
  * Conditionals
+ *
  */
-let instructor = 'something else'
 
-  if(instructor === 'james'){
-  console.log('true inside if block')
-  } else {
-    console.log('inside else block')
+let instructor = "something else";
+
+if (instructor === "james") {
+  console.log("true inside if block");
+} else {
+  console.log("inside else block");
+}
+if ("") {
+  console.log("true inside if block");
+} else if (instructor === "crystal") {
+  console.log("inside else if block");
+} else {
+  console.log("inside else block");
+}
+
+/**
+ *
+ * WHILE LOOPS
+ *
+ */
+
+let myName = "James";
+
+let i = 0;
+while (i < myName.length) {
+  let char = myName[i];
+  console.log(char, i);
+  i++;
+}
+
+/**
+ *
+ * For Loops
+ *
+ */
+
+let myName = "James";
+//  index       condition         step
+for (let i = 0; i < myName.length; i++) {
+  let char = myName[i];
+  console.log(char, i);
+}
+
+/**
+ *
+ * Arrays
+ *
+ */
+
+let myArray = [1, "string", true, [1, 2, "string"]];
+
+for (let i = 0; i < myArray.length; i++) {
+  let ele = myArray[i];
+  console.log(ele);
+}
+
+/**
+ *
+ * Indexing
+ *
+ */
+
+console.log(myArray[2]); // true
+console.log(myArray[myArray.length - 1][1]); // [1,2,'string']
+console.log(myArray[3][1]); // true
+/**
+ * IndexOf
+ */
+
+console.log(myArray.indexOf(false));
+
+/**
+ *
+ * Is 5
+ *
+ */
+
+function isFive(num) {
+  if (num === 5) {
+    return true;
   }
-  if(''){
-  console.log('true inside if block')
-  } else if (instructor === 'crystal'){
-    console.log('inside else if block')
+  return false;
+}
+
+console.log(isFive(5)); // => true
+console.log(isFive(13)); // => false
+
+/**
+ *
+ * isOdd
+ *
+ */
+
+function isOdd(number) {
+  return number % 2 !== 0;
+}
+
+function isOddConditional(number) {
+  if (number % 2 !== 0) {
+    return true;
   } else {
-    console.log('inside else block')
+    return false;
   }
+}
 
-  /**
-  * WHILE LOOPS
-  */
-  let myName = 'James'
+console.log(isOdd(2)); // => false
+console.log(isOdd(5)); // => true
+console.log(isOdd(-17)); // => true
 
+/**
+ *
+ * LogBetween
+ *
+ */
 
+function logBetween(lowNum, highNum) {
+  for (let i = lowNum; i <= highNum; i += 1) {
+    console.log(i);
+  }
+}
+
+function logBetweenWhile(lowNum, highNum) {
+  let i = lowNum;
+  while (i <= highNum) {
+    console.log(i);
+    i++;
+  }
+}
+logBetween(-1, 2);
+
+/**
+ *
+ *
+ * Print 5's
+ *
+ *
+ */
+
+function printFives1For(max) {
+  for (let i = 0; i < max; i += 1) {
+    if (i % 5 === 0) {
+      console.log(i);
+    }
+  }
+}
+
+function printFives1(max) {
   let i = 0;
-  while(i < myName.length){
-    let char = myName[i]
-    console.log(char, i)
-    i++
+  while (i < max) {
+    if (i % 5 === 0) {
+      console.log(i);
+    }
+    i++;
   }
-
-
-  /**
-  * For Loops
-  */
-  let myName = 'James'
-  //  index       condition         step
-  for(let i = 0; i < myName.length; i++){
-    let char = myName[i]
-    console.log(char, i)
-  }
-
-
-  /**
-  * Arrays
-  */
-  let myArray = [1, 'string', true, [1,2,'string']]
-
-  for(let i = 0; i < myArray.length; i++){
-    let ele = myArray[i]
-    console.log(ele)
-  }
-
-  /**
-  * Indexing
-  */
- console.log(myArray[2]) // true
- console.log(myArray[myArray.length -1][1]) // [1,2,'string']
- console.log(myArray[3][1]) // true
-  /**
-  * IndexOf
-  */
-  console.log(myArray.indexOf(false))
-
-  /**
-  * Is 5
-  */
-  function isFive(num) {
-  if(num === 5){
-    return true
-  }
-    return false
-
 }
 
- console.log(isFive(5)); // => true
- console.log(isFive(13)); // => false
-
-  /**
-  * isOdd
-  */
-  function isOdd(number) {
-    return (number % 2 !== 0);
+function printFives2(max) {
+  for (let i = 0; i < max; i += 5) {
+    console.log(i);
+  }
 }
 
-  function isOddConditional(number) {
-    if (number % 2 !== 0) {
-      return true;
-    } else {
-      return false;
-    }
+function printFives2While(max) {
+  let i = 0;
+  while (i < max) {
+    console.log(i);
+    i += 5;
+  }
 }
 
- console.log(isOdd(2)); // => false
- console.log(isOdd(5)); // => true
- console.log(isOdd(-17)); // => true
+/**
+ *
+ * Logbetweenstepper
+ *
+ */
 
-  /**
-  * LogBetween
-  */
+function logBetweenStepperFor(min, max, step) {
+  for (let i = min; i <= max; i += step) {
+    console.log(i);
+  }
+}
 
-  function logBetween(lowNum, highNum) {
-    for (let i = lowNum; i <= highNum; i += 1) {
-      console.log(i);
-    }
+function logBetweenStepper(min, max, step) {
+  let i = min;
+  while (i <= max) {
+    console.log(i);
+    i += step;
+  }
+}
+
+logBetweenStepper(5, 9, 1);
+
+logBetweenStepper(-10, 15, 5);
+
+/**
+ *
+ * THREE OR SEVEN
+ * Write a function that returns true if the number is divisible by 3 or 7, but not both.
+ *
+ */
+
+function threeOrSeven(num) {
+  // your code here...
+  if (num % 3 === 0 || num % 7 === 0) {
+    return true;
+  }
+  return false;
+}
+
+function threeOrSeven(num) {
+  return num % 3 === 0 || num % 7 === 0;
+}
+
+console.log(threeOrSeven(3)); // => true
+console.log(threeOrSeven(42)); // => true
+console.log(threeOrSeven(8)); // => false
+
+/**
+ *
+ * SUM ARRAY
+ * Write a function that takes in an array of numbers and returns the sum of all the numbers in the array.
+ *
+ */
+
+function sumArray(array) {
+  let sum = 0;
+
+  for (let i = 0; i < array.length; i += 1) {
+    let num = array[i];
+    sum += num;
   }
 
-  function logBetweenWhile(lowNum, highNum) {
-    let i = lowNum;
-    while (i <= highNum) {
-      console.log(i);
-      i++;
-    }
-  }
-  logBetween(-1, 2);
+  return sum;
+}
 
-  /**
-  * Print 5's
-  */
-  function printFives1For(max) {
-    for (let i = 0; i < max; i += 1) {
-      if (i % 5 === 0) {
-        console.log(i);
-      }
-    }
+function sumArrayWhile(array) {
+  let sum = 0;
+  let i = 0;
+
+  while (i < array.length) {
+    let num = array[i];
+    sum += num;
+    i += 1;
   }
 
-  function printFives1(max) {
-    let i = 0;
-    while (i < max) {
-      if (i % 5 === 0) {
-        console.log(i);
-      }
-      i++;
-    }
-  }
+  return sum;
+}
 
-  function printFives2(max) {
-    for (let i = 0; i < max; i += 5) {
-      console.log(i);
-    }
-  }
+console.log(sumArray([5, 6, 4])); // => 15
+console.log(sumArray([7, 3, 9, 11])); // => 30
 
-  function printFives2While(max) {
-    let i = 0;
-    while (i < max) {
-      console.log(i);
-      i += 5;
-    }
-  }
+/**
+ * COMBINE ARRAY
+ * Write a function that takes in two arrays of numbers and returns a new array of the sums of the corresponding numbers.
+ *
+ * For example, given the following input:
+ * [1, 2, 3], [4, 5, 6]
+ * Your function should return the following output:
+ * [5, 7, 9]
+ *
+ *
+ * Hint: You may need to use the `concat` method to combine the two arrays.
+ *
+ * Hint: You may need to use the `slice` method to access the elements of the arrays.
+ *
+ * Hint: You may need to use the `push` method to add elements to the new array.
+ *
+ * Hint: You may need to use the `unshift` method to add elements to the beginning of the new array.
+ *
+ * Hint: You may need to use the `indexOf` method to find the index of an element in an array.
+ *
+ * Hint: You may need to use the `splice` method to remove elements from an array.
+ *
+ * Hint: You may need to use the `pop` method to remove the last element from an array.
+ *
+ * Hint: You may need to use the `shift` method to remove the first element from an array.
+ *
+ * Hint: You may need to use the `reverse` method to reverse the order of an array.
+ *
+ * Hint: You may need to use the `sort` method to sort the elements of an array.
+ *
+ * Hint: You may need to use the `join` method to join the elements of an array into a string.
+ *
+ * Hint: You may need to use the `split` method to split a string into an array.
+ *
+ * Hint: You may need to use the `map` method to transform the elements of an array.
+ *
+ * Hint: You may need to use the `filter` method to filter the elements of an array.
+ *
+ * Hint: You may need to use the `reduce` method to reduce the elements of an array.
+ *
+ * Hint: You may need to use the `forEach` method to iterate over the elements of an array.
+ *
+ * Hint: You may need to use the `every` method to test whether all elements in an array pass a test.
+ *
+ * Hint: You may need to use the `some` method to test whether some elements in an array pass a test.
+ *
+ * Hint: You may need to use the `reduceRight` method to reduce the elements of an array in reverse order.
+ *
+ * Hint: You may need to use the `forEachRight` method to iterate over the elements of an array in
+ * reverse order.
+ *
+ * Hint: You may need to use the `lastIndexOf` method to find the last index of an element in an array.
+ */
 
-  /**
-  * Logbetweenstepper
-  */
-  function logBetweenStepperFor(min, max, step) {
-    for (let i = min; i <= max; i += step) {
-      console.log(i);
-    }
-  }
+function combineArray(array1, array2) {
+  return array1.concat(array2);
+}
 
-  function logBetweenStepper(min, max, step) {
-    let i = min;
-    while (i <= max) {
-      console.log(i);
-      i += step;
-    }
-  }
-
-  logBetweenStepper(5, 9, 1);
-
-  logBetweenStepper(-10, 15, 5)
-
-  THREE OR SEVEN
-  function threeOrSeven(num) {
-   // your code here...
-    if(num % 3 === 0 || num % 7 === 0){
-	    return true
-    }
-    return false
-  }
-
-  function threeOrSeven(num) {
-  	return (num % 3 === 0) || (num % 7 === 0);
-  }
-
-
- console.log(threeOrSeven(3));   // => true
- console.log(threeOrSeven(42));  // => true
- console.log(threeOrSeven(8));   // => false
-
-  SUM ARRAY
-  function sumArray(array) {
-    let sum = 0;
-
-    for (let i = 0; i < array.length; i += 1) {
-      let num = array[i];
-      sum += num;
-    }
-
-    return sum;
-  }
-
-  function sumArrayWhile(array) {
-    let sum = 0;
-    let i = 0;
-
-    while (i < array.length) {
-      let num = array[i];
-      sum += num;
-      i += 1;
-    }
-
-    return sum;
-  }
-
- console.log(sumArray([5, 6, 4])); // => 15
- console.log(sumArray([7, 3, 9, 11])); // => 30
-
-
-  COMBINE ARRAY
-  function combineArray(array1, array2) {
-  return array1.concat(array2)
-  }
-
- console.log(combineArray([1, 2], [3, 4])); // => [1, 2, 3, 4]
- console.log(combineArray([17, 5], [6, 7]));  // => [17, 5, 6, 7]
-
+console.log(combineArray([1, 2], [3, 4])); // => [1, 2, 3, 4]
+console.log(combineArray([17, 5], [6, 7])); // => [17, 5, 6, 7]
 
 /**
  *
@@ -234,25 +324,24 @@ let instructor = 'something else'
  *
  */
 
-
 function stringChanger(word, operation) {
-  if (operation === 'reverse') {
-    return word.split('').reverse().join('');
-  } else if (operation === 'upper') {
+  if (operation === "reverse") {
+    return word.split("").reverse().join("");
+  } else if (operation === "upper") {
     return word.toUpperCase();
-  } else if (operation === 'double') {
+  } else if (operation === "double") {
     return word + word;
-  } else if (operation === 'capitalize') {
+  } else if (operation === "capitalize") {
     return word.charAt(0).toUpperCase() + word.slice(1);
-  } else if (operation === 'unknown') {
+  } else if (operation === "unknown") {
     return word;
   }
 }
 
-console.log(stringChanger('Hello', 'reverse'));
-console.log(stringChanger('Hello', 'upper'));
-console.log(stringChanger('Hello', 'double'));
-console.log(stringChanger('Hello', 'capitalize'));
+console.log(stringChanger("Hello", "reverse"));
+console.log(stringChanger("Hello", "upper"));
+console.log(stringChanger("Hello", "double"));
+console.log(stringChanger("Hello", "capitalize"));
 
 console.log(1 == "3-2");
 
@@ -303,7 +392,7 @@ function myIndexOf(arr, searchElement) {
 }
 
 function countVowels(str) {
-  let vowels = ['a', 'e', 'i', 'o', 'u'];
+  let vowels = ["a", "e", "i", "o", "u"];
   let count = 0;
   for (let i = 0; i < str.length; i++) {
     if (vowels.includes(str[i])) {
@@ -314,7 +403,7 @@ function countVowels(str) {
 }
 
 function hasVowel(str) {
-  let vowels = ['a', 'e', 'i', 'o', 'u'];
+  let vowels = ["a", "e", "i", "o", "u"];
   for (let i = 0; i < str.length; i++) {
     if (vowels.includes(str[i])) {
       return true;
@@ -327,11 +416,11 @@ function fizzBuzz(max) {
   let arr = [];
   for (let i = 1; i <= max; i++) {
     if (i % 3 === 0 && i % 5 === 0) {
-      arr.push('fizzbuzz');
+      arr.push("fizzbuzz");
     } else if (i % 3 === 0) {
-      arr.push('fizz');
+      arr.push("fizz");
     } else if (i % 5 === 0) {
-      arr.push('buzz');
+      arr.push("buzz");
     } else {
       arr.push(i);
     }
@@ -340,13 +429,13 @@ function fizzBuzz(max) {
 }
 
 function firstVowel(str) {
-  let vowels = ['a', 'e', 'i', 'o', 'u'];
+  let vowels = ["a", "e", "i", "o", "u"];
   for (let i = 0; i < str.length; i++) {
     if (vowels.includes(str[i])) {
       return str[i];
     }
   }
-  return '';
+  return "";
 }
 
 function evenNumbers(max) {
@@ -380,13 +469,13 @@ function twoSum(arr, target) {
 }
 
 function lastVowel(str) {
-  let vowels = ['a', 'e', 'i', 'o', 'u'];
+  let vowels = ["a", "e", "i", "o", "u"];
   for (let i = str.length - 1; i >= 0; i--) {
     if (vowels.includes(str[i])) {
       return str[i];
     }
   }
-  return '';
+  return "";
 }
 
 function pitPat(max) {
@@ -406,7 +495,7 @@ function pitPat(max) {
 }
 
 function removeLastVowel(str) {
-  let vowels = ['a', 'e', 'i', 'o', 'u'];
+  let vowels = ["a", "e", "i", "o", "u"];
   for (let i = str.length - 1; i >= 0; i--) {
     if (vowels.includes(str[i])) {
       return str.slice(0, i);
@@ -436,11 +525,11 @@ function minValue(nums) {
 }
 
 function pigLatinWord(word) {
-  let vowels = ['a', 'e', 'i', 'o', 'u'];
+  let vowels = ["a", "e", "i", "o", "u"];
   if (vowels.includes(word[0])) {
-    return word + 'ay';
+    return word + "ay";
   } else {
-    return word.slice(1) + word[0] + 'ay';
+    return word.slice(1) + word[0] + "ay";
   }
 }
 
