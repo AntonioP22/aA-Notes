@@ -41,7 +41,7 @@ while (i < myName.length) {
  */
 
 myName = "James";
-//  index       condition         step
+
 for (let i = 0; i < myName.length; i++) {
   let char = myName[i];
   console.log(char, i);
@@ -257,10 +257,12 @@ console.log(sumArray([7, 3, 9, 11])); // => 30
 
 /**
  * COMBINE ARRAY
+ *
  * Write a function that takes in two arrays of numbers and returns a new array of the sums of the corresponding numbers.
  *
  * For example, given the following input:
  * [1, 2, 3], [4, 5, 6]
+ *
  * Your function should return the following output:
  * [5, 7, 9]
  *
