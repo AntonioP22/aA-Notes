@@ -2,7 +2,7 @@
 
 ## Using this repository
 
-1. Use the Template Button above ^ and follow the instructions on making a new repository.
+1. Use the Template Button above ^ and follow the instructions on making a new repository.(Don't click on the .github ISSUE-TEMPLATE)
 
 1. Then in your VSCode on the getting started screen click on clone repository.
 
