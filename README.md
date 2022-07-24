@@ -12,8 +12,8 @@ This is my version of the Notes from App Academy that includes the following inf
 
 ## Using this repository
 
-Clone the repository with the following command line:
-
+Use the Template Button above ^
+<!---
 ```
 gh repo clone AntonioP22/aA-Notes
 ```
@@ -23,7 +23,7 @@ gh repo clone AntonioP22/aA-Notes
 ```
 code aA-Notes
 ```
-
+--->
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
