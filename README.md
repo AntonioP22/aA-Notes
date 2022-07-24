@@ -2,11 +2,9 @@
 
 ## Using this repository
 
-1. Use the Template Button above ^ and follow the instructions on making a new repository.(Don't click on the .github/ISSUE_TEMPLATE)
+1. Use ```gh repo clone AntonioP22/aA-Notes``` in your VSCode Terminal. (Don't click on the .github/ISSUE_TEMPLATE)
 
-2. Then in your VSCode on the getting started screen click on clone repository.
-
-3. If there's a new update you will need to do ```git pull origin main``` in order to get the latest update.
+2. If there's a new update you will need to do ```git pull origin main``` in order to get the latest update.
 
 ## This is my version of the Notes from App Academy that includes the following information:
 
