@@ -4,7 +4,7 @@
 
 Use the Template Button above ^
 
-This is my version of the Notes from App Academy that includes the following information:
+##This is my version of the Notes from App Academy that includes the following information:
 
 ## Week 1:
 
