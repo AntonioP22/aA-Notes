@@ -40,7 +40,7 @@ while (i < myName.length) {
  *
  */
 
-let myName = "James";
+myName = "James";
 //  index       condition         step
 for (let i = 0; i < myName.length; i++) {
   let char = myName[i];
