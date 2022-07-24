@@ -2,7 +2,9 @@
 
 ## Using this repository
 
-Use the Template Button above ^
+1. Use the Template Button above ^ and follow the instructions on making a new repository.
+
+1. Then in your VSCode on the getting started screen click on clone repository.
 
 ## This is my version of the Notes from App Academy that includes the following information:
 
@@ -13,17 +15,7 @@ Use the Template Button above ^
 3. For loop statements
 4. While statements
 5. Array Methods
-<!---
-```
-gh repo clone AntonioP22/aA-Notes
-```
 
-## Usage
-
-```
-code aA-Notes
-```
---->
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
