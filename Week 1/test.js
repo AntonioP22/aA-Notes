@@ -568,3 +568,271 @@ function leastCommonMultiple(num1, num2) {
   }
   return lcm;
 }
+
+// Write a function that removes all of the consonants from a string and returns that new string.
+// Write your function in function expression syntax. Use the Array.splice method in your implementation.
+// Feel free to look up the Array.splice method on MDN. We will work through this problem together when the 10 minutes are up.
+// console.log(removeCons('keyboard')); // eoa
+// console.log(removeCons('avocado')); // aoao
+// console.log(removeCons('myrmecophilous')); // eoiou
+// console.log(removeCons('happy birthday')); // a ia
+
+// const removeCons = function (str) {
+//   let vowels = ["a", "e", "i", "o", "u"];
+//   let newStr = "";
+//   for (let i = 0; i < str.length; i++) {
+//     if (vowels.includes(str[i])) {
+//       newStr += str[i];
+//     }
+//   }
+//   return newStr;
+// };
+
+// Array.slice(start, end)
+// Array.splice(start, deleteCount, ...items)
+const removeCons = function (str) {
+  let vowels = ["a", "e", "i", "o", "u"];
+  let newArr = [];
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.includes(str[i])) {
+      newArr.push(str[i]);
+    } else {
+      newArr.splice(i, 1);
+    }
+  }
+  return newArr.join("");
+};
+// const removeCons = function (str) {
+//   let vowels = ["a", "e", "i", "o", "u"];
+//   let newStr = "";
+//   for (let i = 0; i < str.length; i++) {
+
+console.log(removeCons("keyboard")); // eoa
+console.log(removeCons("avocado")); // aoao
+console.log(removeCons("myrmecophilous")); // eoiou
+console.log(removeCons("happy birthday")); // a ia
+
+// let rotateRight = function (array, num) {
+//   let copy = array.slice();
+
+//   for (let i = 0; i < num; i++) {
+//     let el = copy.pop();
+//     copy.unshift(el);
+//   }
+
+//   return copy;
+// };
+
+// let arr = ["a", "b", "c", "d", "e"];
+// console.log(rotateRight(arr, 2)); // [ 'd', 'e', 'a', 'b', 'c' ]
+// console.log(arr); // [ 'a', 'b', 'c', 'd', 'e' ]
+
+// let animals = ["wombat", "koala", "opossum", "kangaroo"];
+// console.log(rotateRight(animals, 3)); // [ 'koala', 'opossum', 'kangaroo', 'wombat' ]
+// console.log(animals); // [ 'wombat', 'koala', 'opossum', 'kangaroo' ]
+
+// Two Dimensional Sum
+
+function twoDimensionalSum(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+      sum += arr[i][j];
+    }
+  }
+  return sum;
+}
+
+function rotateRight(array, num) {
+  let copy = array.slice();
+
+  for (let i = 0; i < num; i++) {
+    let el = copy.pop();
+    copy.unshift(el);
+  }
+
+  return copy;
+}
+
+function avgVal(arr) {
+  let sum = 0;
+  if (arr.length === 0) {
+    return null;
+  }
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum / arr.length;
+}
+
+function myIndexOf(arr, target) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === target) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+function tripler(arr) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    newArr.push(arr[i] * 3);
+  }
+  return newArr;
+}
+
+function longWords(words) {
+  let newArr = [];
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length > 5) {
+      newArr.push(words[i]);
+    }
+  }
+  return newArr;
+}
+
+function maxValue(nums) {
+  let max = nums[0];
+  for (let i = 1; i < nums.length; i++) {
+    if (nums[i] > max) {
+      max = nums[i];
+    }
+  }
+  return max;
+}
+
+function removeWordsThatStartWithE(words) {
+  let newStr = "";
+  for (let i = 0; i < words.length; i++) {
+    if (words[i][0] !== "e") {
+      newStr += words[i] + " ";
+    }
+  }
+  return newStr;
+}
+
+function removeEWords(sentence) {
+  let words = sentence.split(" ");
+  let filtered = [];
+  for (let i = 0; i < words.length; i++) {
+    let word = words[i];
+    if (!word.toLowerCase().includes("e")) {
+      filtered.push(word);
+    }
+  }
+  return filtered.join(" ");
+}
+
+function fizzbuzz(num) {
+  for (let i = 1; i <= num; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log("fizzbuzz");
+    } else if (i % 3 === 0) {
+      console.log("fizz");
+    } else if (i % 5 === 0) {
+      console.log("buzz");
+    } else {
+      console.log(i);
+    }
+  }
+}
+
+let twoSumRecall = function (arr, target) {
+  for (let i = 0; i < arr.length; i++) {
+    let first = arr[i];
+    for (let j = i + 1; j < arr.length; j++) {
+      let second = arr[j];
+      if (first + second === target) {
+        return true;
+      }
+    }
+  }
+  return false;
+};
+
+let reverseSentence = function (sentence) {
+  let words = sentence.split(" ");
+  let reversed = [];
+  for (let i = words.length - 1; i >= 0; i--) {
+    reversed.push(words[i]);
+  }
+  return reversed.join(" ");
+};
+
+let initials = function (name) {
+  let names = name.split(" ");
+  let initials = "";
+  for (let i = 0; i < names.length; i++) {
+    initials += names[i][0];
+  }
+  return initials.toUpperCase();
+};
+
+let twoDimensionalProduct = function (arr) {
+  let product = 1;
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+      product *= arr[i][j];
+    }
+  }
+  return product;
+};
+
+let popper = function (arr, num) {
+  let removed = [];
+  for (let i = 0; i < num; i++) {
+    removed.push(arr.pop());
+  }
+  return removed;
+};
+
+let isPrime = function (num) {
+  if (num === 1) {
+    return false;
+  }
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+};
+
+let choosePrimes = function (nums) {
+  let primes = [];
+  for (let i = 0; i < nums.length; i++) {
+    if (isPrime(nums[i])) {
+      primes.push(nums[i]);
+    }
+  }
+  return primes;
+};
+
+let longestWord = function (sentence) {
+  let words = sentence.split(" ");
+  let longest = words[0];
+  for (let i = 1; i < words.length; i++) {
+    if (words[i].length > longest.length) {
+      longest = words[i];
+    }
+  }
+  return longest;
+};
+
+let abbreviateRemoveVowels = function (word) {
+  let vowels = "aeiou";
+  let newWord = "";
+  for (let i = 0; i < word.length; i++) {
+    if (vowels.includes(word[i])) {
+      newWord += "";
+    } else {
+      newWord += word[i];
+    }
+  }
+  return newWord;
+};
+
+let productWithReduce = function (nums) {
+  return nums.reduce((acc, curr) => acc * curr);
+};
