@@ -7,16 +7,16 @@
 let instructor = "something else";
 
 if (instructor === "james") {
-  console.log("true inside if block");
+    console.log("true inside if block");
 } else {
-  console.log("inside else block");
+    console.log("inside else block");
 }
 if ("") {
-  console.log("true inside if block");
+    console.log("true inside if block");
 } else if (instructor === "crystal") {
-  console.log("inside else if block");
+    console.log("inside else if block");
 } else {
-  console.log("inside else block");
+    console.log("inside else block");
 }
 
 /**
@@ -29,9 +29,9 @@ let myName = "James";
 
 let i = 0;
 while (i < myName.length) {
-  let char = myName[i];
-  console.log(char, i);
-  i++;
+    let char = myName[i];
+    console.log(char, i);
+    i++;
 }
 
 /**
@@ -43,8 +43,8 @@ while (i < myName.length) {
 myName = "James";
 
 for (let i = 0; i < myName.length; i++) {
-  let char = myName[i];
-  console.log(char, i);
+    let char = myName[i];
+    console.log(char, i);
 }
 
 /**
@@ -56,8 +56,8 @@ for (let i = 0; i < myName.length; i++) {
 let myArray = [1, "string", true, [1, 2, "string"]];
 
 for (let i = 0; i < myArray.length; i++) {
-  let ele = myArray[i];
-  console.log(ele);
+    let ele = myArray[i];
+    console.log(ele);
 }
 
 /**
@@ -74,12 +74,12 @@ console.log(myArray[3][1]); // true
  */
 
 function myIndexOf(arr, searchElement) {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === searchElement) {
-      return i;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === searchElement) {
+            return i;
+        }
     }
-  }
-  return -1;
+    return -1;
 }
 
 // console.log(myArray.indexOf(false));
@@ -91,10 +91,10 @@ function myIndexOf(arr, searchElement) {
  */
 
 function isFive(num) {
-  if (num === 5) {
-    return true;
-  }
-  return false;
+    if (num === 5) {
+        return true;
+    }
+    return false;
 }
 
 console.log(isFive(5)); // => true
@@ -107,15 +107,15 @@ console.log(isFive(13)); // => false
  */
 
 function isOdd(number) {
-  return number % 2 !== 0;
+    return number % 2 !== 0;
 }
 
 function isOddConditional(number) {
-  if (number % 2 !== 0) {
-    return true;
-  } else {
-    return false;
-  }
+    if (number % 2 !== 0) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 console.log(isOdd(2)); // => false
@@ -129,17 +129,17 @@ console.log(isOdd(-17)); // => true
  */
 
 function logBetween(lowNum, highNum) {
-  for (let i = lowNum; i <= highNum; i += 1) {
-    console.log(i);
-  }
+    for (let i = lowNum; i <= highNum; i += 1) {
+        console.log(i);
+    }
 }
 
 function logBetweenWhile(lowNum, highNum) {
-  let i = lowNum;
-  while (i <= highNum) {
-    console.log(i);
-    i++;
-  }
+    let i = lowNum;
+    while (i <= highNum) {
+        console.log(i);
+        i++;
+    }
 }
 logBetween(-1, 2);
 
@@ -152,35 +152,35 @@ logBetween(-1, 2);
  */
 
 function printFives1For(max) {
-  for (let i = 0; i < max; i += 1) {
-    if (i % 5 === 0) {
-      console.log(i);
+    for (let i = 0; i < max; i += 1) {
+        if (i % 5 === 0) {
+            console.log(i);
+        }
     }
-  }
 }
 
 function printFives1(max) {
-  let i = 0;
-  while (i < max) {
-    if (i % 5 === 0) {
-      console.log(i);
+    let i = 0;
+    while (i < max) {
+        if (i % 5 === 0) {
+            console.log(i);
+        }
+        i++;
     }
-    i++;
-  }
 }
 
 function printFives2(max) {
-  for (let i = 0; i < max; i += 5) {
-    console.log(i);
-  }
+    for (let i = 0; i < max; i += 5) {
+        console.log(i);
+    }
 }
 
 function printFives2While(max) {
-  let i = 0;
-  while (i < max) {
-    console.log(i);
-    i += 5;
-  }
+    let i = 0;
+    while (i < max) {
+        console.log(i);
+        i += 5;
+    }
 }
 
 /**
@@ -190,23 +190,23 @@ function printFives2While(max) {
  */
 
 function logBetweenStepperFor(min, max, step) {
-  for (let i = min; i <= max; i += step) {
-    console.log(i);
-  }
+    for (let i = min; i <= max; i += step) {
+        console.log(i);
+    }
 }
 
 function logBetweenStepper(min, max, step) {
-  let i = min;
-  while (i <= max) {
-    console.log(i);
-    i += step;
-  }
+    let i = min;
+    while (i <= max) {
+        console.log(i);
+        i += step;
+    }
 }
 
 function logBetweenStepper(min, max, step) {
-  for (let i = min; i <= max; i += step) {
-    console.log(i);
-  }
+    for (let i = min; i <= max; i += step) {
+        console.log(i);
+    }
 }
 
 logBetweenStepper(5, 9, 1);
@@ -221,15 +221,15 @@ logBetweenStepper(-10, 15, 5);
  */
 
 function threeOrSeven(num) {
-  // your code here...
-  if (num % 3 === 0 || num % 7 === 0) {
-    return true;
-  }
-  return false;
+    // your code here...
+    if (num % 3 === 0 || num % 7 === 0) {
+        return true;
+    }
+    return false;
 }
 
 function threeOrSeven(num) {
-  return num % 3 === 0 || num % 7 === 0;
+    return num % 3 === 0 || num % 7 === 0;
 }
 
 console.log(threeOrSeven(3)); // => true
@@ -244,35 +244,35 @@ console.log(threeOrSeven(8)); // => false
  */
 
 function sumArray(array) {
-  let sum = 0;
+    let sum = 0;
 
-  for (let i = 0; i < array.length; i += 1) {
-    let num = array[i];
-    sum += num;
-  }
+    for (let i = 0; i < array.length; i += 1) {
+        let num = array[i];
+        sum += num;
+    }
 
-  return sum;
+    return sum;
 }
 
 function sumArrayWhile(array) {
-  let sum = 0;
-  let i = 0;
+    let sum = 0;
+    let i = 0;
 
-  while (i < array.length) {
-    let num = array[i];
-    sum += num;
-    i += 1;
-  }
+    while (i < array.length) {
+        let num = array[i];
+        sum += num;
+        i += 1;
+    }
 
-  return sum;
+    return sum;
 }
 
 function sumArray(arr) {
-  let sum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    sum += arr[i];
-  }
-  return sum;
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum;
 }
 
 console.log(sumArray([5, 6, 4])); // => 15
@@ -335,7 +335,7 @@ console.log(sumArray([7, 3, 9, 11])); // => 30
  */
 
 function combineArray(array1, array2) {
-  return array1.concat(array2);
+    return array1.concat(array2);
 }
 
 console.log(combineArray([1, 2], [3, 4])); // => [1, 2, 3, 4]
@@ -355,17 +355,17 @@ console.log(combineArray([17, 5], [6, 7])); // => [17, 5, 6, 7]
  */
 
 function stringChanger(word, operation) {
-  if (operation === "reverse") {
-    return word.split("").reverse().join("");
-  } else if (operation === "upper") {
-    return word.toUpperCase();
-  } else if (operation === "double") {
-    return word + word;
-  } else if (operation === "capitalize") {
-    return word.charAt(0).toUpperCase() + word.slice(1);
-  } else if (operation === "unknown") {
-    return word;
-  }
+    if (operation === "reverse") {
+        return word.split("").reverse().join("");
+    } else if (operation === "upper") {
+        return word.toUpperCase();
+    } else if (operation === "double") {
+        return word + word;
+    } else if (operation === "capitalize") {
+        return word.charAt(0).toUpperCase() + word.slice(1);
+    } else if (operation === "unknown") {
+        return word;
+    }
 }
 
 console.log(stringChanger("Hello", "reverse"));
@@ -381,7 +381,7 @@ console.log(stringChanger("Hello", "capitalize"));
  */
 
 function range(min, max) {
-  return Array.from({ length: max - min + 1 }, (_, i) => min + i);
+    return Array.from({ length: max - min + 1 }, (_, i) => min + i);
 }
 
 /**
@@ -392,12 +392,12 @@ function range(min, max) {
  */
 
 function myIncludes(arr, searchElement) {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === searchElement) {
-      return true;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === searchElement) {
+            return true;
+        }
     }
-  }
-  return false;
+    return false;
 }
 
 /**
@@ -408,165 +408,165 @@ function myIncludes(arr, searchElement) {
  */
 
 function factorsOf(num) {
-  let factors = [];
-  for (let i = 1; i <= num; i++) {
-    if (num % i === 0) {
-      factors.push(i);
+    let factors = [];
+    for (let i = 1; i <= num; i++) {
+        if (num % i === 0) {
+            factors.push(i);
+        }
     }
-  }
-  return factors;
+    return factors;
 }
 
 function countVowels(str) {
-  let vowels = ["a", "e", "i", "o", "u"];
-  let count = 0;
-  for (let i = 0; i < str.length; i++) {
-    if (vowels.includes(str[i])) {
-      count++;
+    let vowels = ["a", "e", "i", "o", "u"];
+    let count = 0;
+    for (let i = 0; i < str.length; i++) {
+        if (vowels.includes(str[i])) {
+            count++;
+        }
     }
-  }
-  return count;
+    return count;
 }
 
 function hasVowel(str) {
-  let vowels = ["a", "e", "i", "o", "u"];
-  for (let i = 0; i < str.length; i++) {
-    if (vowels.includes(str[i])) {
-      return true;
+    let vowels = ["a", "e", "i", "o", "u"];
+    for (let i = 0; i < str.length; i++) {
+        if (vowels.includes(str[i])) {
+            return true;
+        }
     }
-  }
-  return false;
+    return false;
 }
 
 function fizzBuzz(max) {
-  let arr = [];
-  for (let i = 1; i <= max; i++) {
-    if (i % 3 === 0 && i % 5 === 0) {
-      arr.push("fizzbuzz");
-    } else if (i % 3 === 0) {
-      arr.push("fizz");
-    } else if (i % 5 === 0) {
-      arr.push("buzz");
-    } else {
-      arr.push(i);
+    let arr = [];
+    for (let i = 1; i <= max; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            arr.push("fizzbuzz");
+        } else if (i % 3 === 0) {
+            arr.push("fizz");
+        } else if (i % 5 === 0) {
+            arr.push("buzz");
+        } else {
+            arr.push(i);
+        }
     }
-  }
-  return arr;
+    return arr;
 }
 
 function firstVowel(str) {
-  let vowels = ["a", "e", "i", "o", "u"];
-  for (let i = 0; i < str.length; i++) {
-    if (vowels.includes(str[i])) {
-      return str[i];
+    let vowels = ["a", "e", "i", "o", "u"];
+    for (let i = 0; i < str.length; i++) {
+        if (vowels.includes(str[i])) {
+            return str[i];
+        }
     }
-  }
-  return "";
+    return "";
 }
 
 function evenNumbers(max) {
-  let arr = [];
-  for (let i = 0; i <= max; i++) {
-    if (i % 2 === 0) {
-      arr.push(i);
+    let arr = [];
+    for (let i = 0; i <= max; i++) {
+        if (i % 2 === 0) {
+            arr.push(i);
+        }
     }
-  }
-  return arr;
+    return arr;
 }
 
 function isPrime(num) {
-  for (let i = 2; i < num; i++) {
-    if (num % i === 0) {
-      return false;
+    for (let i = 2; i < num; i++) {
+        if (num % i === 0) {
+            return false;
+        }
     }
-  }
-  return true;
+    return true;
 }
 
 function twoSum(arr, target) {
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = i + 1; j < arr.length; j++) {
-      if (arr[i] + arr[j] === target) {
-        return [i, j];
-      }
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] + arr[j] === target) {
+                return [i, j];
+            }
+        }
     }
-  }
-  return [];
+    return [];
 }
 
 function lastVowel(str) {
-  let vowels = ["a", "e", "i", "o", "u"];
-  for (let i = str.length - 1; i >= 0; i--) {
-    if (vowels.includes(str[i])) {
-      return str[i];
+    let vowels = ["a", "e", "i", "o", "u"];
+    for (let i = str.length - 1; i >= 0; i--) {
+        if (vowels.includes(str[i])) {
+            return str[i];
+        }
     }
-  }
-  return "";
+    return "";
 }
 
 function pitPat(max) {
-  let arr = [];
-  for (let i = 1; i <= max; i++) {
-    if (i % 4 === 0 && i % 6 === 0) {
-      arr.push(i);
-    } else if (i % 4 === 0) {
-      arr.push(i);
-    } else if (i % 6 === 0) {
-      arr.push(i);
-    } else {
-      arr.push();
+    let arr = [];
+    for (let i = 1; i <= max; i++) {
+        if (i % 4 === 0 && i % 6 === 0) {
+            arr.push(i);
+        } else if (i % 4 === 0) {
+            arr.push(i);
+        } else if (i % 6 === 0) {
+            arr.push(i);
+        } else {
+            arr.push();
+        }
     }
-  }
-  return arr;
+    return arr;
 }
 
 function removeLastVowel(str) {
-  let vowels = ["a", "e", "i", "o", "u"];
-  for (let i = str.length - 1; i >= 0; i--) {
-    if (vowels.includes(str[i])) {
-      return str.slice(0, i);
+    let vowels = ["a", "e", "i", "o", "u"];
+    for (let i = str.length - 1; i >= 0; i--) {
+        if (vowels.includes(str[i])) {
+            return str.slice(0, i);
+        }
     }
-  }
-  return str;
+    return str;
 }
 
 function pairsMaker(arr) {
-  let pairs = [];
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = i + 1; j < arr.length; j++) {
-      pairs.push([arr[i], arr[j]]);
+    let pairs = [];
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            pairs.push([arr[i], arr[j]]);
+        }
     }
-  }
-  return pairs;
+    return pairs;
 }
 
 function minValue(nums) {
-  let min = nums[0];
-  for (let i = 1; i < nums.length; i++) {
-    if (nums[i] < min) {
-      min = nums[i];
+    let min = nums[0];
+    for (let i = 1; i < nums.length; i++) {
+        if (nums[i] < min) {
+            min = nums[i];
+        }
     }
-  }
-  return min;
+    return min;
 }
 
 function pigLatinWord(word) {
-  let vowels = ["a", "e", "i", "o", "u"];
-  if (vowels.includes(word[0])) {
-    return word + "ay";
-  } else {
-    return word.slice(1) + word[0] + "ay";
-  }
+    let vowels = ["a", "e", "i", "o", "u"];
+    if (vowels.includes(word[0])) {
+        return word + "ay";
+    } else {
+        return word.slice(1) + word[0] + "ay";
+    }
 }
 
 function leastCommonMultiple(num1, num2) {
-  let max = Math.max(num1, num2);
-  let min = Math.min(num1, num2);
-  let lcm = max;
-  while (lcm % min !== 0) {
-    lcm += max;
-  }
-  return lcm;
+    let max = Math.max(num1, num2);
+    let min = Math.min(num1, num2);
+    let lcm = max;
+    while (lcm % min !== 0) {
+        lcm += max;
+    }
+    return lcm;
 }
 
 // Write a function that removes all of the consonants from a string and returns that new string.
@@ -591,16 +591,16 @@ function leastCommonMultiple(num1, num2) {
 // Array.slice(start, end)
 // Array.splice(start, deleteCount, ...items)
 const removeCons = function (str) {
-  let vowels = ["a", "e", "i", "o", "u"];
-  let newArr = [];
-  for (let i = 0; i < str.length; i++) {
-    if (vowels.includes(str[i])) {
-      newArr.push(str[i]);
-    } else {
-      newArr.splice(i, 1);
+    let vowels = ["a", "e", "i", "o", "u"];
+    let newArr = [];
+    for (let i = 0; i < str.length; i++) {
+        if (vowels.includes(str[i])) {
+            newArr.push(str[i]);
+        } else {
+            newArr.splice(i, 1);
+        }
     }
-  }
-  return newArr.join("");
+    return newArr.join("");
 };
 // const removeCons = function (str) {
 //   let vowels = ["a", "e", "i", "o", "u"];
@@ -612,227 +612,21 @@ console.log(removeCons("avocado")); // aoao
 console.log(removeCons("myrmecophilous")); // eoiou
 console.log(removeCons("happy birthday")); // a ia
 
-// let rotateRight = function (array, num) {
-//   let copy = array.slice();
+let rotateRight = function (array, num) {
+    let copy = array.slice();
 
-//   for (let i = 0; i < num; i++) {
-//     let el = copy.pop();
-//     copy.unshift(el);
-//   }
-
-//   return copy;
-// };
-
-// let arr = ["a", "b", "c", "d", "e"];
-// console.log(rotateRight(arr, 2)); // [ 'd', 'e', 'a', 'b', 'c' ]
-// console.log(arr); // [ 'a', 'b', 'c', 'd', 'e' ]
-
-// let animals = ["wombat", "koala", "opossum", "kangaroo"];
-// console.log(rotateRight(animals, 3)); // [ 'koala', 'opossum', 'kangaroo', 'wombat' ]
-// console.log(animals); // [ 'wombat', 'koala', 'opossum', 'kangaroo' ]
-
-// Two Dimensional Sum
-
-function twoDimensionalSum(arr) {
-  let sum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr[i].length; j++) {
-      sum += arr[i][j];
+    for (let i = 0; i < num; i++) {
+        let el = copy.pop();
+        copy.unshift(el);
     }
-  }
-  return sum;
-}
 
-function rotateRight(array, num) {
-  let copy = array.slice();
-
-  for (let i = 0; i < num; i++) {
-    let el = copy.pop();
-    copy.unshift(el);
-  }
-
-  return copy;
-}
-
-function avgVal(arr) {
-  let sum = 0;
-  if (arr.length === 0) {
-    return null;
-  }
-  for (let i = 0; i < arr.length; i++) {
-    sum += arr[i];
-  }
-  return sum / arr.length;
-}
-
-function myIndexOf(arr, target) {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === target) {
-      return i;
-    }
-  }
-  return -1;
-}
-
-function tripler(arr) {
-  let newArr = [];
-  for (let i = 0; i < arr.length; i++) {
-    newArr.push(arr[i] * 3);
-  }
-  return newArr;
-}
-
-function longWords(words) {
-  let newArr = [];
-  for (let i = 0; i < words.length; i++) {
-    if (words[i].length > 5) {
-      newArr.push(words[i]);
-    }
-  }
-  return newArr;
-}
-
-function maxValue(nums) {
-  let max = nums[0];
-  for (let i = 1; i < nums.length; i++) {
-    if (nums[i] > max) {
-      max = nums[i];
-    }
-  }
-  return max;
-}
-
-function removeWordsThatStartWithE(words) {
-  let newStr = "";
-  for (let i = 0; i < words.length; i++) {
-    if (words[i][0] !== "e") {
-      newStr += words[i] + " ";
-    }
-  }
-  return newStr;
-}
-
-function removeEWords(sentence) {
-  let words = sentence.split(" ");
-  let filtered = [];
-  for (let i = 0; i < words.length; i++) {
-    let word = words[i];
-    if (!word.toLowerCase().includes("e")) {
-      filtered.push(word);
-    }
-  }
-  return filtered.join(" ");
-}
-
-function fizzbuzz(num) {
-  for (let i = 1; i <= num; i++) {
-    if (i % 3 === 0 && i % 5 === 0) {
-      console.log("fizzbuzz");
-    } else if (i % 3 === 0) {
-      console.log("fizz");
-    } else if (i % 5 === 0) {
-      console.log("buzz");
-    } else {
-      console.log(i);
-    }
-  }
-}
-
-let twoSumRecall = function (arr, target) {
-  for (let i = 0; i < arr.length; i++) {
-    let first = arr[i];
-    for (let j = i + 1; j < arr.length; j++) {
-      let second = arr[j];
-      if (first + second === target) {
-        return true;
-      }
-    }
-  }
-  return false;
+    return copy;
 };
 
-let reverseSentence = function (sentence) {
-  let words = sentence.split(" ");
-  let reversed = [];
-  for (let i = words.length - 1; i >= 0; i--) {
-    reversed.push(words[i]);
-  }
-  return reversed.join(" ");
-};
+let arr = ["a", "b", "c", "d", "e"];
+console.log(rotateRight(arr, 2)); // [ 'd', 'e', 'a', 'b', 'c' ]
+console.log(arr); // [ 'a', 'b', 'c', 'd', 'e' ]
 
-let initials = function (name) {
-  let names = name.split(" ");
-  let initials = "";
-  for (let i = 0; i < names.length; i++) {
-    initials += names[i][0];
-  }
-  return initials.toUpperCase();
-};
-
-let twoDimensionalProduct = function (arr) {
-  let product = 1;
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr[i].length; j++) {
-      product *= arr[i][j];
-    }
-  }
-  return product;
-};
-
-let popper = function (arr, num) {
-  let removed = [];
-  for (let i = 0; i < num; i++) {
-    removed.push(arr.pop());
-  }
-  return removed;
-};
-
-let isPrime = function (num) {
-  if (num === 1) {
-    return false;
-  }
-  for (let i = 2; i < num; i++) {
-    if (num % i === 0) {
-      return false;
-    }
-  }
-  return true;
-};
-
-let choosePrimes = function (nums) {
-  let primes = [];
-  for (let i = 0; i < nums.length; i++) {
-    if (isPrime(nums[i])) {
-      primes.push(nums[i]);
-    }
-  }
-  return primes;
-};
-
-let longestWord = function (sentence) {
-  let words = sentence.split(" ");
-  let longest = words[0];
-  for (let i = 1; i < words.length; i++) {
-    if (words[i].length > longest.length) {
-      longest = words[i];
-    }
-  }
-  return longest;
-};
-
-let abbreviateRemoveVowels = function (word) {
-  let vowels = "aeiou";
-  let newWord = "";
-  for (let i = 0; i < word.length; i++) {
-    if (vowels.includes(word[i])) {
-      newWord += "";
-    } else {
-      newWord += word[i];
-    }
-  }
-  return newWord;
-};
-
-let productWithReduce = function (nums) {
-  return nums.reduce((acc, curr) => acc * curr);
-};
+let animals = ["wombat", "koala", "opossum", "kangaroo"];
+console.log(rotateRight(animals, 3)); // [ 'koala', 'opossum', 'kangaroo', 'wombat' ]
+console.log(animals); // [ 'wombat', 'koala', 'opossum', 'kangaroo' ]
