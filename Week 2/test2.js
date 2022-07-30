@@ -407,3 +407,153 @@ function luckyNumbers(arr) {
     }
     return luckyNumbers;
 }
+
+//Write a function `checkForFactor` that accepts a number and a potential factor. The function should return true if the factor is a factor of the number, otherwise it should return false.
+
+function checkForFactor(number, factor) {
+    if (number % factor === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+//Write a function `getGrade`. Complete the function so that it finds the average of the three scores passed to it and returns the letter value associated with that grade.Numerical Score	Letter Grade 90 <= score <= 100	'A' 80 <= score < 90	'B' 70 <= score < 80	'C' 60 <= score < 70	'D' 0 <= score < 60	'F' Tested values are all between 0 and 100. Theres is no need to check for negative values or values greater than 100.
+
+function getGrade(score1, score2, score3) {
+    let average = (score1 + score2 + score3) / 3;
+    if (average >= 90) {
+        return "A";
+    } else if (average >= 80) {
+        return "B";
+    } else if (average >= 70) {
+        return "C";
+    } else if (average >= 60) {
+        return "D";
+    } else {
+        return "F";
+    }
+}
+
+//Write a function `humanReadable` which takes a non-negative integer (seconds) as input and returns the time in a human-readable format (HH:MM:SS) HH = hours, padded to 2 digits, range: 00 - 99 MM = minutes, padded to 2 digits, range: 00 - 59 SS = seconds, padded to 2 digits, range: 00 - 59 The maximum time never exceeds 359999 (99:59:59).
+
+function humanReadable(seconds) {
+    let hours = Math.floor(seconds / 3600);
+    let minutes = Math.floor((seconds % 3600) / 60);
+    let secondsLeft = seconds % 60;
+    return `${hours.toString().padStart(2, "0")}:${minutes
+        .toString()
+        .padStart(2, "0")}:${secondsLeft.toString().padStart(2, "0")}`;
+}
+
+//Write a function `isPangram`. A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant). Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
+
+function isPangram(str) {
+    let alphabet = "abcdefghijklmnopqrstuvwxyz";
+    let strArr = str.toLowerCase().split("");
+    for (let i = 0; i < alphabet.length; i++) {
+        if (!strArr.includes(alphabet[i])) {
+            return false;
+        }
+    }
+    return true;
+}
+
+//Write a function `solution` that accepts a string and returns a new string that breaks up camel casing using a space between words. For example, if passed the string "helloWorld", the function should return "hello World".
+
+function solution(str) {
+    let strArr = str.split("");
+    let newStr = "";
+    for (let i = 0; i < strArr.length; i++) {
+        if (strArr[i] === strArr[i].toUpperCase()) {
+            newStr += strArr[i] + " ";
+        } else {
+            newStr += strArr[i];
+        }
+    }
+    return newStr;
+}
+
+//Write a function `generateHashtag` that accepts a string. Here's the deal: It must start with a hashtag (#). All words must have their first letter capitalized. If the final result is longer than 140 chars it must return false. If the input or the result is an empty string it must return false.
+
+function generateHashtag(str) {
+    if (str.length === 0) {
+        return false;
+    }
+    let strArr = str.split(" ");
+    let newStr = "#";
+    for (let i = 0; i < strArr.length; i++) {
+        newStr += strArr[i].charAt(0).toUpperCase() + strArr[i].slice(1);
+    }
+    if (newStr.length > 140) {
+        return false;
+    } else if (newStr.length === 1) {
+        return false;
+    }
+    return newStr;
+}
+
+//Write a function `arrUpperCase` that accepts an array of strings and mutates the original array with all the strings capitalized.
+
+function arrUpperCase(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = arr[i].toUpperCase();
+    }
+    return arr;
+}
+
+//Write a function `hasDoubleLetter` that accepts a string. The function should return true if the string contains two consecutive letters. Else return null.
+
+function hasDoubleLetter(str) {
+    let strArr = str.split("");
+    for (let i = 0; i < strArr.length - 1; i++) {
+        if (strArr[i] === strArr[i + 1]) {
+            return true;
+        } else if (str !== typeof string) {
+            return null;
+        }
+    }
+    return false;
+}
+
+//Write a function `luckyNumbers(matrix)` that takes in a 2D array and returns all lucky numbers in any order. A lucky number is the minimum element in its row and the maximum element in its column.
+
+function luckyNumbers(matrix) {
+    let luckyNumbers = [];
+    for (let i = 0; i < matrix.length; i++) {
+        let min = matrix[i][0];
+        for (let j = 0; j < matrix[i].length; j++) {
+            if (matrix[i][j] < min) {
+                min = matrix[i][j];
+            }
+        }
+        let max = matrix[i][0];
+        for (let j = 0; j < matrix[i].length; j++) {
+            if (matrix[i][j] > max) {
+                max = matrix[i][j];
+            }
+        }
+        if (min === max) {
+            luckyNumbers.push(min);
+        } else {
+            continue;
+        }
+    }
+    return luckyNumbers;
+}
+
+matrix = [
+    [5, 9, 21],
+    [9, 19, 6],
+    [12, 14, 15],
+];
+
+console.log(luckyNumbers(matrix)); // [12]
+
+matrix = [
+    [5, 10, 8, 6],
+    [10, 2, 7, 9],
+    [21, 15, 19, 10],
+];
+
+console.log(luckyNumbers(matrix)); //
