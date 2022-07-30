@@ -557,3 +557,79 @@ matrix = [
 ];
 
 console.log(luckyNumbers(matrix)); //
+
+//Write a function `firstAndLast` that accepts an array of numbers and returns the sum of the first and last element if there is an even number of elements in the array. If there is an odd number of elements in the array, then the function should return the difference between the first and last element. If the array is empty, the function should return 0.
+
+function firstAndLast(arr) {
+    if (arr.length === 0) {
+        return 0;
+    } else if (arr.length % 2 === 0) {
+        return arr[0] + arr[arr.length - 1];
+    } else {
+        return arr[0] - arr[arr.length - 1];
+    }
+}
+
+//Write a function `adjacentSums` that accepts an array of numbers as an argument. The function should return a new array containing the sum of each pair of elements in the input array.
+
+function adjacentSums(arr) {
+    let newArr = [];
+    for (let i = 0; i < arr.length - 1; i++) {
+        newArr.push(arr[i] + arr[i + 1]);
+    }
+    return newArr;
+}
+
+//Write a function choosePrimes(nums) that takes in an array of numbers as args. The function should return a new array containing the primes from the original array. A prime number is a number that is only divisible by 1 and itself. Hint: consider creating a helper function to check if a number is prime!
+
+function choosePrimes(nums) {
+    let newArr = [];
+    for (let i = 0; i < nums.length; i++) {
+        if (isPrime(nums[i])) {
+            newArr.push(nums[i]);
+        }
+    }
+    return newArr;
+}
+
+function isPrime(num) {
+    for (let i = 2; i < num; i++) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+//Write a function spiralOrder(matrix) that takes in a 2-dimensional array (matrix) and returns an array containing the elements in spiral order.
+
+function spiralOrder(matrix) {
+    let newArr = [];
+    let row = 0;
+    let col = 0;
+    let maxRow = matrix.length - 1;
+    let maxCol = matrix[0].length - 1;
+    while (row <= maxRow && col <= maxCol) {
+        for (let i = col; i <= maxCol; i++) {
+            newArr.push(matrix[row][i]);
+        }
+        row++;
+        for (let i = row; i <= maxRow; i++) {
+            newArr.push(matrix[i][maxCol]);
+        }
+        maxCol--;
+        if (row <= maxRow) {
+            for (let i = maxCol; i >= col; i--) {
+                newArr.push(matrix[maxRow][i]);
+            }
+            maxRow--;
+        }
+        if (col <= maxCol) {
+            for (let i = maxRow; i >= row; i--) {
+                newArr.push(matrix[i][col]);
+            }
+            col++;
+        }
+    }
+    return newArr;
+}
