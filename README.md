@@ -6,7 +6,7 @@
 
 2. Then in your VSCode on the getting started screen click on clone repository.
 
-3. If there's a new update you will need to do ```git pull origin main``` in order to get the latest update.
+3. If there's a new update you will need to do `git pull origin main` in order to get the latest update.
 
 ## This is my version of the Notes from App Academy that includes the following information:
 
@@ -17,6 +17,14 @@
 3. For loop statements
 4. While statements
 5. Array Methods
+
+## Week 2:
+
+1. Functions
+2. Scope
+3. Nested Loops
+4. Intermediate array methods
+5. 2-Dimensional arrays(matrix)
 
 ## Contributing
 
