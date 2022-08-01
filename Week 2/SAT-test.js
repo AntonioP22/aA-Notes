@@ -596,25 +596,192 @@ console.log(isPerfectSquare(32)); // false
 console.log(isPerfectSquare(50)); // false
 
 console.log("-----------------------------------------------------");
-console.log("-----------        MatrixAddition         -----------");
+console.log("-----------         PrimeFactors          -----------");
+console.log("-----------------------------------------------------");
+
+//?Write a function `primeFactors` that accepts a number as an argument. The function should return an array containing all of the prime numbers that can divide the given number.
+
+function primeFactors(num) {
+    let factors = [];
+    for (let i = 2; i <= num; i++) {
+        if (isPrime2(i) && num % i === 0) {
+            factors.push(i);
+        }
+    }
+    return factors;
+}
+
+function isPrime2(num) {
+    for (let i = 2; i < num; i++) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+console.log(primeFactors(12)); // [2, 3]
+console.log(primeFactors(7)); // [7]
+console.log(primeFactors(16)); // [2]
+console.log(primeFactors(30)); // [2, 3, 5]
+console.log(primeFactors(35)); // [5, 7]
+console.log(primeFactors(49)); // [7]
+console.log(primeFactors(128)); // [2]
+
+console.log("-----------------------------------------------------");
+console.log("-------------         PrevPrime         -------------");
+console.log("-----------------------------------------------------");
+
+//?Write a function `prevPrime` that accepts a number as an argument. The function should return the nearest prime number that is smaller than the given argument. Since 2 is the smallest prime number, return null if no number can be returned.
+
+function prevPrime(num) {
+    for (let i = num - 1; i > 1; i--) {
+        if (isPrime3(i)) {
+            return i;
+        }
+    }
+    return null;
+}
+
+function isPrime3(num) {
+    for (let i = 2; i < num; i++) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+console.log(prevPrime(32)); // 31
+console.log(prevPrime(33)); // 31
+console.log(prevPrime(14)); // 13
+console.log(prevPrime(7)); // 5
+console.log(prevPrime(4)); // 3
+console.log(prevPrime(2)); // null
+console.log(prevPrime(1)); // null
+
+console.log("-----------------------------------------------------");
+console.log("----------         HasThreeVowels         -----------");
+console.log("-----------------------------------------------------");
+
+//?Write a function `hasThreeVowels` that accepts a string as an argument. The function should return a boolean indicating whether or not the string contains at least three different vowels.
+
+function hasThreeVowels(str) {
+    let vowels = ["a", "e", "i", "o", "u"];
+    let count = 0;
+    for (let i = 0; i < str.length; i++) {
+        if (vowels.includes(str[i])) {
+            count++;
+        }
+    }
+    return count > 3;
+}
+
+console.log(hasThreeVowels("delicious")); //  true
+console.log(hasThreeVowels("bootcamp prep")); //  true
+console.log(hasThreeVowels("bootcamp")); //  false
+console.log(hasThreeVowels("dog")); //  false
+console.log(hasThreeVowels("go home")); //  false
+
+console.log("-----------------------------------------------------");
+console.log("----------       FibonacciSequence         ----------");
+console.log("-----------------------------------------------------");
+
+//?Write a function `fibonacciSequence` that accepts a number as an argument. The function should return an array representing the fibonacci sequence up to the given length. The first and second numbers of the sequence are 1 and 1. To generate subsequent numbers of the sequence, we take the sum of the previous two numbers of the sequence.
+
+function fibonacciSequence(num) {
+    let arr = [1, 1];
+    if (num === 1) {
+        return arr.slice(0, 1);
+    } else if (num === 0) {
+        return [];
+    }
+    for (let i = 2; i < num; i++) {
+        arr.push(arr[i - 2] + arr[i - 1]);
+    }
+    return arr;
+}
+
+console.log(fibonacciSequence(4)); // [ 1, 1, 2, 3 ]
+console.log(fibonacciSequence(5)); // [ 1, 1, 2, 3, 5 ]
+console.log(fibonacciSequence(8)); // [ 1, 1, 2, 3, 5, 8, 13, 21 ]
+console.log(fibonacciSequence(0)); // [ ]
+console.log(fibonacciSequence(1)); // [ 1 ]
+console.log(fibonacciSequence(2)); // [ 1, 1 ]
+
+console.log("-----------------------------------------------------");
+console.log("-----------          IsAntiPrime          -----------");
+console.log("-----------------------------------------------------");
+
+//?Write a function `isAntiPrime` that accepts a number as an argument. The method should return true if the given number has more divisors than all positive numbers less than the given number. For example, 24 is an anti-prime because it has more divisors than any positive number less than 24.
+
+let isAntiPrime = function (n) {
+    let factorsOfN = numFactors(n);
+
+    for (let i = 1; i < n; i++) {
+        if (factorsOfN <= numFactors(i)) {
+            return false;
+        }
+    }
+
+    return true;
+};
+
+let numFactors = function (n) {
+    let count = 0;
+    for (let i = 1; i < n; i++) {
+        if (n % i === 0) {
+            count++;
+        }
+    }
+    return count;
+};
+
+console.log(isAntiPrime(24)); // true
+console.log(isAntiPrime(36)); // true
+console.log(isAntiPrime(48)); // true
+console.log(isAntiPrime(360)); // true
+console.log(isAntiPrime(1260)); // true
+console.log(isAntiPrime(27)); // false
+console.log(isAntiPrime(5)); // false
+console.log(isAntiPrime(100)); // false
+console.log(isAntiPrime(136)); // false
+console.log(isAntiPrime(1024)); // false
+
+console.log("-----------------------------------------------------");
+console.log("-------------           PigIt           -------------");
+console.log("-----------------------------------------------------");
+
+//?Write a function `pigIt` that accepts a string and moves the first letter of each word to the end of it, then add "ay" to the end of the word. Leave punctuation marks untouched.
+
+function pigIt(str) {
+    let arr = str.split(" ");
+    for (let i = 0; i < arr.length; i++) {
+        if (!/[a-zA-Z]/.test(arr[i])) {
+            continue;
+        } else {
+            let temp = arr[i].slice(1);
+            arr[i] = temp + arr[i][0] + "ay";
+        }
+    }
+    return arr.join(" ");
+}
+
+console.log(pigIt("Pig latin is cool")); // igPay atinlay siay oolcay
+console.log(pigIt("Hello world !")); // elloHay orldway !
+
+console.log("-----------------------------------------------------");
+console.log("-------------           PigIt           -------------");
 console.log("-----------------------------------------------------");
 
 console.log("-----------------------------------------------------");
-console.log("-----------        MatrixAddition         -----------");
+console.log("-------------           PigIt           -------------");
 console.log("-----------------------------------------------------");
 
 console.log("-----------------------------------------------------");
-console.log("-----------        MatrixAddition         -----------");
+console.log("-------------           PigIt           -------------");
 console.log("-----------------------------------------------------");
 
 console.log("-----------------------------------------------------");
-console.log("-----------        MatrixAddition         -----------");
-console.log("-----------------------------------------------------");
-
-console.log("-----------------------------------------------------");
-console.log("-----------        MatrixAddition         -----------");
-console.log("-----------------------------------------------------");
-
-console.log("-----------------------------------------------------");
-console.log("-----------        MatrixAddition         -----------");
+console.log("-------------           PigIt           -------------");
 console.log("-----------------------------------------------------");

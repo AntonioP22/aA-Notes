@@ -582,17 +582,17 @@ function adjacentSums(arr) {
 
 //Write a function choosePrimes(nums) that takes in an array of numbers as args. The function should return a new array containing the primes from the original array. A prime number is a number that is only divisible by 1 and itself. Hint: consider creating a helper function to check if a number is prime!
 
-function choosePrimes(nums) {
+function choosePrimes2(nums) {
     let newArr = [];
     for (let i = 0; i < nums.length; i++) {
-        if (isPrime(nums[i])) {
+        if (isPrime2(nums[i])) {
             newArr.push(nums[i]);
         }
     }
     return newArr;
 }
 
-function isPrime(num) {
+function isPrime2(num) {
     for (let i = 2; i < num; i++) {
         if (num % i === 0) {
             return false;
@@ -629,6 +629,23 @@ function spiralOrder(matrix) {
                 newArr.push(matrix[i][col]);
             }
             col++;
+        }
+    }
+    return newArr;
+}
+
+//?Write a function `moveZeroes` that takes an array and moves all of the zeros to the end, preserving the order of the other elements.
+
+function moveZeroes(arr) {
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] !== 0) {
+            newArr.push(arr[i]);
+        }
+    }
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === 0) {
+            newArr.push(arr[i]);
         }
     }
     return newArr;
